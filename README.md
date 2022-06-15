@@ -1,1 +1,10 @@
 # Autonomous-Cargo-Ships
+
+Computational application using KD-Trees that offers different options of autonomous ship sailing (motion) planning. The functionality required evaluates aspects of autonomous ship navigation within a fleet (a group of ships). These aspects include global and local properties such as nearest and farthest ships, analysis of potential collisions, and drawing maps of the fleet.
+
+The requirements are:
+
+- Nearest ships. Communication between ships has a finite range. A ship has to know to which ships send information relevant to the navigation route. Given the location of a vessel (point in the plane), find and report the s closest ships to the location using the Euclidean distance. If there is more than s closest to the location of the vessel, report only s of them, choosing them randomly.
+- Avoiding collisions. As the ships navigate, they need to take into account if there are other vessels within some distance so maneuvers can be performed and collisions can be avoided. Find and return whether there are any ships within a square of arbitrary orientation of length r and center given by the location of a ship. The orientation of the square must set by either the library or the application. Only one range search needs to be performed.
+- Leading and lagging vessels. Suppose you want to explore areas in four directions: north (N), south (S), west (W), and east (E). It would be advisable to send the ships that are either lagging or leading within the fleet to save fuel. Find and report all the ships that have locations with either maximal or minimal x- or y-coordinates. Report all the ships if there is more than one ship for each direction. It might happen that one ship can have maximal/minimal position in more that one direction.
+- mplement a method that generates a two-dimensional map with the location of each ship in the fleet. Represent ships as dots (or some other relevant symbol) and the splitting lines using different colors for x- and y-coordinates.
